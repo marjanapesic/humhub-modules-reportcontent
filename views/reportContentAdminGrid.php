@@ -70,8 +70,8 @@
                                 'buttonFalse' => Yii::t('ReportContentModule.widgets_views_reportContentAdminGrid', 'Cancel'),
                                 'class' => 'btn btn-primary btn-sm',
                                 'linkContent' => Yii::t('ReportContentModule.widgets_views_reportContentAdminGrid', 'Delete report'),
-                                'linkHref' => Yii::app()->getController()->createUrl("//reportcontent/reportcontent/appropriate", array('id' => $report->id)),
-                                'confirmJS' => 'function(jsonResp) { location.reload();  }'
+                                'linkHref' => Yii::app()->getController()->createUrl("//reportcontent/reportContent/appropriate", array('id' => $report->id)),
+                                //'confirmJS' => 'function(jsonResp) { location.reload();  }'
                             ));
                             ?>
                     </td>
@@ -85,8 +85,8 @@
                                 'buttonFalse' => Yii::t('ReportContentModule.widgets_views_reportContentAdminGrid', 'Cancel'),
                                 'class' => 'btn btn-sm btn-danger',
                                 'linkContent' => Yii::t('ReportContentModule.widgets_views_reportContentAdminGrid', 'Delete post'),
-                                'linkHref' => Yii::app()->getController()->createUrl("//wall/content/delete", array('model' => get_class($report->getSource()), 'id' => $report->getSource()->id)),
-                                'confirmJS' => 'function(jsonResp) { location.reload();  }'
+                                'linkHref' => Yii::app()->getController()->createUrl("//reportcontent/reportContent/deleteContent", array('model' => get_class($report->getSource()), 'id' => $report->getSource()->id)),
+                                //'confirmJS' => 'function(jsonResp) { location.reload();  }'
                             ));
                             ?>
                     </td>
